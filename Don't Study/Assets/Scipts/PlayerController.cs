@@ -9,18 +9,19 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
 
     public float MovementSpeed = 1f;
-    public Vector2 velocity;
+    
+    Vector2 velocity;
     
     
 
     
-    // Start is called before the first frame update
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();//defines the rigidbody we'll be using
     }
 
-    // Update is called once per frame
+    //all input here
     void Update()
     {
         Vector2 MovementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -28,9 +29,10 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    private void FixedUpdate()//all calls related to physics
+    //all movement here
+    private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + velocity * Time.deltaTime);
+        rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
     }
 
     
