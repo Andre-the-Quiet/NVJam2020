@@ -20,14 +20,13 @@ public class PatrolBehavior : StateMachineBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("Patrolling", false);
-            patrolScript.enabled = false;
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        patrolScript.enabled = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
