@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 3270de169f1824f4e9903b49e1a7c556
+guid: e8a0aab83dad70147b6d3300cd779f84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4567835009097913493
-    second: diagonal_downLeft_0
+      213: 70464959845765214
+    second: downLeft_0
   - first:
-      213: -3870112052907782625
-    second: diagonal_downLeft_1
+      213: -912796590317877573
+    second: downLeft_1
   - first:
-      213: 8357420171890798443
-    second: diagonal_downLeft_2
+      213: 2719873423642225093
+    second: downLeft_2
   - first:
-      213: 8099822333906279461
-    second: diagonal_downLeft_3
+      213: 6901447797080812265
+    second: downLeft_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: diagonal_downLeft_0
+      name: downLeft_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,14 +127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6b202ab24acb90c0800000000000000
-      internalID: -4567835009097913493
+      spriteID: e5018b4f1875af000800000000000000
+      internalID: 70464959845765214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: diagonal_downLeft_1
+      name: downLeft_1
       rect:
         serializedVersion: 2
         x: 25
@@ -148,14 +148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1e4975b7999a4ac0800000000000000
-      internalID: -3870112052907782625
+      spriteID: bb64ae956581553f0800000000000000
+      internalID: -912796590317877573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: diagonal_downLeft_2
+      name: downLeft_2
       rect:
         serializedVersion: 2
         x: 0
@@ -169,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6f2c38ed558bf370800000000000000
-      internalID: 8357420171890798443
+      spriteID: 5c96832e77eeeb520800000000000000
+      internalID: 2719873423642225093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: diagonal_downLeft_3
+      name: downLeft_3
       rect:
         serializedVersion: 2
         x: 25
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52c524c7f79586070800000000000000
-      internalID: 8099822333906279461
+      spriteID: 9ea67ecb43ed6cf50800000000000000
+      internalID: 6901447797080812265
       vertices: []
       indices: 
       edges: []

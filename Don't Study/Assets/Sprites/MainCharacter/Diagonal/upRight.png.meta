@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 23c236c651118504d849f0966da29ecc
+guid: 562f96a58413da64489f142d28b50a7e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -356487349253391901
-    second: diagonal_upRight_0
+      213: -7097763755111408915
+    second: upRight_0
   - first:
-      213: 8258982976459566240
-    second: diagonal_upRight_1
+      213: 8008814275556105810
+    second: upRight_1
   - first:
-      213: 8549404010257302225
-    second: diagonal_upRight_2
+      213: -5167637175918115123
+    second: upRight_2
   - first:
-      213: -6972948928241039666
-    second: diagonal_upRight_3
+      213: 6647815815875014895
+    second: upRight_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: diagonal_upRight_0
+      name: upRight_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,14 +127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e9b4d405a08d0bf0800000000000000
-      internalID: -356487349253391901
+      spriteID: dea11f4687daf7d90800000000000000
+      internalID: -7097763755111408915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: diagonal_upRight_1
+      name: upRight_1
       rect:
         serializedVersion: 2
         x: 25
@@ -148,14 +148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aceed5524dcd9270800000000000000
-      internalID: 8258982976459566240
+      spriteID: 25e599ea626052f60800000000000000
+      internalID: 8008814275556105810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: diagonal_upRight_2
+      name: upRight_2
       rect:
         serializedVersion: 2
         x: 0
@@ -169,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d2cfa096a595a670800000000000000
-      internalID: 8549404010257302225
+      spriteID: dc64c492e5dd848b0800000000000000
+      internalID: -5167637175918115123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: diagonal_upRight_3
+      name: upRight_3
       rect:
         serializedVersion: 2
         x: 25
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec6804fd4eb1b3f90800000000000000
-      internalID: -6972948928241039666
+      spriteID: fe0347d4349c14c50800000000000000
+      internalID: 6647815815875014895
       vertices: []
       indices: 
       edges: []
