@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.300049, y: -9.900024}
+  m_AnchoredPosition: {x: 7.300049, y: -9.9001465}
   m_SizeDelta: {x: 94.21448, y: 65.43298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &327297870
@@ -295,7 +295,9 @@ MonoBehaviour:
     WASD to
     move and SPACEBAR to use your ability - the ULTIMATE PROCRASTINATION TOOL!!!!!
 
-'
+
+    E
+    to quick date'
 --- !u!222 &425498033
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -681,7 +683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -9.900024}
+  m_AnchoredPosition: {x: 0, y: -9.9001465}
   m_SizeDelta: {x: 94.21033, y: 112.93762}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &870910091

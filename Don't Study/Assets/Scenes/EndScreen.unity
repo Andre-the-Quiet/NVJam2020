@@ -649,8 +649,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 242, y: -159}
-  m_SizeDelta: {x: 295.2, y: 380.8}
+  m_AnchoredPosition: {x: 242, y: -28.3}
+  m_SizeDelta: {x: 295.2, y: 548.21985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834112202
 MonoBehaviour:
@@ -685,8 +685,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Artist:\n\nMudi L.\nSarah Y.\nRosemary W.\nYufei X.\nBob W.\n\nProgrammar:\n\nMasato
-    L.\nAndr\xE9 P.\nBob W."
+  m_Text: "Artist:\n\nMudi L.\nSarah Y.\nRosemary W.\nYufei X.\nBob W.\n\nProgrammar:\n\nDanial
+    A.\nMasato L.\nAndr\xE9 P.\nBob W.\n\nSound:\n\nfreesound.org\nsoundsnap.com"
 --- !u!222 &834112203
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1037,6 +1037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionAnim: {fileID: 1798388372}
+  UI: {fileID: 0}
   sceneName: 
 --- !u!1 &1798388371
 GameObject:
