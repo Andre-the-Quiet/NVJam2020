@@ -1524,6 +1524,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7e01e174798bbe1439b32fae4bb242c8, type: 3}
   - {fileID: 8300000, guid: a6ab241682671f64ba27dc5225244faa, type: 3}
   Myaudio: {fileID: 192737248}
+  transitionAnim: {fileID: 1871255316}
+  sceneName: EndScreen
   MovementSpeed: 8
   taskPopup: {fileID: 280682645}
 --- !u!212 &192737242
@@ -3436,7 +3438,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 6
+  maxSpeed: 5
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -3448,7 +3450,7 @@ MonoBehaviour:
   maxAcceleration: -2.5
   rotationSpeed: 360
   slowdownDistance: 0.6
-  pickNextWaypointDist: 5
+  pickNextWaypointDist: 2
   endReachedDistance: 0.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
@@ -3490,7 +3492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733390163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.35, y: -18.78, z: -0.5034674}
+  m_LocalPosition: {x: 18.87, y: -1.66, z: -0.5034674}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1886000851}
@@ -3979,6 +3981,7 @@ MonoBehaviour:
   AbilityAnimator: {fileID: 1792363907}
   AbilitySound: {fileID: 8300000, guid: dcaa49e41323da241a6888915bd53690, type: 3}
   Myaudio: {fileID: 919844997}
+  MyCharacter: {fileID: 192737241}
 --- !u!82 &919844997
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6489,7 +6492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1857939451
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6681,7 +6684,7 @@ GameObject:
   - component: {fileID: 1886000856}
   m_Layer: 0
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6722,11 +6725,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 1886000850}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 27bc073c16dc6bf42892ae1a87dd9dde, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11109328, y: 0.36084557}
+  m_Offset: {x: 0.11109328, y: 0.20729548}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6737,7 +6740,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2224994, y: 3.87109}
+  m_Size: {x: 2.2224994, y: 4.17819}
   m_EdgeRadius: 0
 --- !u!212 &1886000854
 SpriteRenderer:
@@ -6821,7 +6824,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

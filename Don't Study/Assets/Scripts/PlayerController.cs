@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,9 +10,10 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public AudioClip[] FootstepAudio;
     public AudioSource Myaudio;
+    public Animator transitionAnim;
+    public string sceneName;
 
-
-    public float MovementSpeed = 1f;
+    public float MovementSpeed = 8f;
     
     Vector2 velocity;
 
@@ -81,6 +83,21 @@ public class PlayerController : MonoBehaviour
     public void move()
     {
         canMove = true;
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == ("enemy")) 
+        {
+            StartCoroutine(LoadScene());
+        }
+
+    }
+    IEnumerator LoadScene()
+    {
+        transitionAnim.SetTrigger("End");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneName);
     }
 
 

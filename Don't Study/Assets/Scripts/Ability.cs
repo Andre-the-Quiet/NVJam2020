@@ -13,6 +13,7 @@ public class Ability : MonoBehaviour
 
     public AudioClip AbilitySound;
     public AudioSource Myaudio;
+    public PlayerController MyCharacter;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class Ability : MonoBehaviour
             abilityImage.fillAmount = 0;
             Myaudio.PlayOneShot(AbilitySound);
             AbilityAnimator.SetTrigger("Start");
+            StartCoroutine(SpeedBoost());
             
             
         }
@@ -47,5 +49,11 @@ public class Ability : MonoBehaviour
                 isCooldown = false;
             }
         }
+    }
+    IEnumerator SpeedBoost()
+    {
+        MyCharacter.MovementSpeed = 16f;
+        yield return new WaitForSeconds(2f);
+        MyCharacter.MovementSpeed = 8f;
     }
 }
