@@ -7,6 +7,8 @@ public class MonsterAI : MonoBehaviour
 {
     [SerializeField]
     Transform target, sprite;
+    [SerializeField]
+    FieldOfView cone;
     public float speed = 200f;
     float nextWaypointDist = 3f;
 
@@ -25,7 +27,11 @@ public class MonsterAI : MonoBehaviour
 
         InvokeRepeating("UpdatePath", 0f, 0.5f);
     }
-
+    private void Update()
+    {
+        cone.SetOrigin(transform.position);
+        cone.SetDirection(target.position - transform.position);
+    }
     void UpdatePath()
     {
         if(seeker.IsDone())
