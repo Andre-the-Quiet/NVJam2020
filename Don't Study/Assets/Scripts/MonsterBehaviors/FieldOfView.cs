@@ -28,7 +28,7 @@ public class FieldOfView : MonoBehaviour
         int rayCount = 50;
        // offset = transform.position - startPos;
        // startPos = origin;
-        float angle = 0f;
+        float angle = startAngle;
         float incrAngle = fov / rayCount;
 
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];//1 for origing and 1 for the 0 ray
@@ -92,7 +92,7 @@ public class FieldOfView : MonoBehaviour
     }
     public void SetDirection(Vector3 dir)
     {
-        startAngle = AngleFromVector(dir) - fov / 2f;
+        startAngle = AngleFromVector(dir) + fov / 2f;
     }
     public void SetFOV(float view)
     {
