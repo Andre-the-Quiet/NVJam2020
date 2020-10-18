@@ -30,7 +30,7 @@ public class Ability : MonoBehaviour
         }
         if (isCooldown)
         {
-            abilityImage.fillAmount += 1 / cooldown * Time.deltaTime;
+            abilityImage.fillAmount += 1 / cooldown * Time.fixedDeltaTime;
 
             if(abilityImage.fillAmount >= 1)
             {
