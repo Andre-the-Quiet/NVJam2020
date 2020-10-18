@@ -22,10 +22,10 @@ public class ChaseBehavior : StateMachineBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("Chasing", false);
-            ai.enabled = false;
         }
         if(Input.GetKeyDown(KeyCode.P))
         {
+            animator.SetBool("Chasing", false);
             animator.SetBool("Patrolling", true);
         }
     }
@@ -33,7 +33,7 @@ public class ChaseBehavior : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        ai.enabled = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
