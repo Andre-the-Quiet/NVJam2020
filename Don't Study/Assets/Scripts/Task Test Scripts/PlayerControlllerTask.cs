@@ -9,14 +9,12 @@ public class PlayerControlllerTask : MonoBehaviour
 
     public GameObject taskPopup;
     bool canMove;
-    int button;
     Vector2 velocity;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();//defines the rigidbody we'll be using
         taskPopup.SetActive(false);
         canMove = true;
-        button = 0;
     }
 
     //all input here
@@ -34,9 +32,8 @@ public class PlayerControlllerTask : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            taskPopup.SetActive(true);
             canMove = false;
-            taskPopup.GetComponent<TaskScript>().Reappear();
+            taskPopup.GetComponent<TaskScript>().activate();
         }
 
     }
@@ -47,14 +44,8 @@ public class PlayerControlllerTask : MonoBehaviour
         rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
     }
 
-    public void CloseTask()
+    public void move()
     {
-        button++;
-        if (button >= 2)
-        {
-            taskPopup.SetActive(false);
-            canMove = true;
-            button = 0;
-        }
+        canMove = true;
     }
 }

@@ -14,27 +14,43 @@ public class PlayerController : MonoBehaviour
     public float MovementSpeed = 1f;
     
     Vector2 velocity;
-    
-    
 
-    
-    
+
+    public GameObject taskPopup;
+    bool canMove;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();//defines the rigidbody we'll be using
+        taskPopup.SetActive(false);
+        canMove = true;
     }
 
     //all input here
     void Update()
     {
-        
 
-        Vector2 MovementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        velocity = MovementDirection.normalized * MovementSpeed;
+        if (canMove)
+        {
+            Vector2 MovementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            velocity = MovementDirection.normalized * MovementSpeed;
 
-        MyAnimator.SetFloat("Horizontal", velocity.x);
-        MyAnimator.SetFloat("Vertical", velocity.y);
-        MyAnimator.SetFloat("Speed", velocity.sqrMagnitude);
+            MyAnimator.SetFloat("Horizontal", velocity.x);
+            MyAnimator.SetFloat("Vertical", velocity.y);
+            MyAnimator.SetFloat("Speed", velocity.sqrMagnitude);
+        }
+        else
+        {
+            velocity = Vector2.zero;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            canMove = false;
+            taskPopup.GetComponent<TaskScript>().activate();
+        }
+
     }
 
     //all movement here
@@ -59,6 +75,11 @@ public class PlayerController : MonoBehaviour
             int randomType = UnityEngine.Random.Range(0, 2);
             Myaudio.PlayOneShot(FootstepAudio[randomType]);
         }
+    }
+
+    public void move()
+    {
+        canMove = true;
     }
 
 

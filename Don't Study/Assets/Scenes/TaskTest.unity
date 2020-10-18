@@ -446,8 +446,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 552607669}
-        m_TargetAssemblyTypeName: PlayerControlllerTask, Assembly-CSharp
+      - m_Target: {fileID: 1914864501}
+        m_TargetAssemblyTypeName: TaskScript, Assembly-CSharp
         m_MethodName: CloseTask
         m_Mode: 1
         m_Arguments:
@@ -526,7 +526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &552607668
 Rigidbody2D:
   serializedVersion: 4
@@ -1109,8 +1109,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 552607669}
-        m_TargetAssemblyTypeName: PlayerControlllerTask, Assembly-CSharp
+      - m_Target: {fileID: 1914864501}
+        m_TargetAssemblyTypeName: TaskScript, Assembly-CSharp
         m_MethodName: CloseTask
         m_Mode: 1
         m_Arguments:
@@ -1263,7 +1263,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3415ae0df4242a49ac7b2bc159b75a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 552607667}
   button1: {fileID: 400821704}
   button2: {fileID: 1775834588}
-  button3: {fileID: 0}
-  button4: {fileID: 0}

@@ -17,10 +17,15 @@ public class PatrolBehavior : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         patrolScript.enabled = true;
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (patrolScript.inViewDist && patrolScript.inViewAngle)
         {
             animator.SetBool("Patrolling", false);
+            animator.SetBool("Chasing", true);
         }
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    animator.SetBool("Patrolling", false);
+        //}
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

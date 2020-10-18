@@ -4,15 +4,46 @@ using UnityEngine;
 
 public class TaskScript : MonoBehaviour
 {
+    public GameObject player;
+    int button;
     public GameObject button1;
     public GameObject button2;
-    public GameObject button3;
-    public GameObject button4;
-    public void Reappear()
+
+
+    void Start()
+    {
+        //gameObject.SetActive(false);
+        button = 0;
+    }
+
+    //all input here
+    void Update()
+    {
+
+
+    }
+
+    public void activate()
+    {
+        gameObject.SetActive(true);
+        button = 0;
+        Reappear();
+    }
+
+    public void CloseTask()
+    {
+        button++;
+        if (button >= 2)
+        {
+            gameObject.SetActive(false);
+            player.GetComponent<PlayerController>().move();
+            button = 0;
+        }
+    }
+public void Reappear()
     {
         button1.SetActive(true);
         button2.SetActive(true);
-        button3.SetActive(true);
-        button4.SetActive(true);
+
     }
 }
