@@ -9,7 +9,8 @@ public class TriggerEvent : MonoBehaviour
     public bool teleported = false;
     public GameObject dest;
     public GameObject target;
-
+    public AudioClip FX;
+    public AudioSource FXsource;
     
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -44,7 +45,9 @@ public class TriggerEvent : MonoBehaviour
     IEnumerator LoadScene(Collider2D col)
     {
         transitionAnim.SetTrigger("End");
+        FXsource.PlayOneShot(FX);
         yield return new WaitForSeconds(0.3f);
+        
         col.transform.position = dest.transform.position;
         transitionAnim.SetTrigger("Start");
     }
