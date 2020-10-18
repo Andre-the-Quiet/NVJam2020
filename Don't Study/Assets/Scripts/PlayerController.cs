@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     public Animator MyAnimator;
     public Rigidbody2D rb;
+    public AudioClip[] FootstepAudio;
+    public AudioSource Myaudio;
+
 
     public float MovementSpeed = 1f;
     
@@ -40,7 +43,23 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
     }
 
-    
+    void FootForward()
+    {
+        if (Mathf.Abs(velocity.x) <= Mathf.Abs(velocity.y))
+        {
+            int randomType = UnityEngine.Random.Range(0, 2);
+            Myaudio.PlayOneShot(FootstepAudio[randomType]);
+        }
+    }
 
-    
+    void FootSide()
+    {
+        if (Mathf.Abs(velocity.x) >= Mathf.Abs(velocity.y))
+        {
+            int randomType = UnityEngine.Random.Range(0, 2);
+            Myaudio.PlayOneShot(FootstepAudio[randomType]);
+        }
+    }
+
+
 }
