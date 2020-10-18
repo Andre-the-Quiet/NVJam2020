@@ -45,9 +45,10 @@ public class PlayerController : MonoBehaviour
             velocity = Vector2.zero;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             canMove = false;
+            MyAnimator.SetFloat("Speed", 0);
             taskPopup.GetComponent<TaskScript>().activate();
         }
 

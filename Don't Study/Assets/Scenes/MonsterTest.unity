@@ -458,6 +458,9 @@ MonoBehaviour:
   obstacles:
     serializedVersion: 2
     m_Bits: 256
+  startAngle: 0
+  fov: 0
+  viewDist: 0
 --- !u!4 &374378457
 Transform:
   m_ObjectHideFlags: 0
@@ -490,7 +493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &906244114
 Transform:
   m_ObjectHideFlags: 0
@@ -646,6 +649,7 @@ MonoBehaviour:
   sprite: {fileID: 0}
   cone: {fileID: 374378456}
   speed: 400
+  MonsterAnim: {fileID: 0}
 --- !u!114 &974554857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,6 +740,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
+  inViewDist: 0
+  inViewAngle: 0
+  canSee: 0
   nodes:
   - {fileID: 1465895065}
   - {fileID: 1545244540}
@@ -744,6 +751,8 @@ MonoBehaviour:
   - {fileID: 347307927}
   - {fileID: 1087552730}
   - {fileID: 1618305910}
+  cone: {fileID: 0}
+  target: {fileID: 0}
 --- !u!114 &974554862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,6 +768,9 @@ MonoBehaviour:
   obstacles:
     serializedVersion: 2
     m_Bits: 0
+  startAngle: 0
+  fov: 0
+  viewDist: 0
 --- !u!212 &974554863
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -885,7 +897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACAn+s81dbPXAIAAAAFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty2jAU/RVG65KxCY/SXesQ0kVCJrSTjTeydY01yJJHj/DI8O+9kg123BXinPs45+rKn4RLU0NulV5rzp4VA/JjRPyZfBt15BMc6U7JLT/DNeadM1v6IBpi3qjlCvHYpxlVgdU8/yl3wgdHCDrJC6WrFdtBoow1CBdUGEBKK+uzJUKfI3LEn/HSp5zwNFn40xlPy2h0wWMO0oLuhU7vlt9ncTybTVfjaNGmXZOaHCdzQasamDfQpcbzNjpuwiRaayO8jVwJwU2ri9hTHXwntDYOXWEA4xR9BjE+vgS+K63X3E/eFIUB20rS9PTANY6rqUp+qWaGFTX7RtcHFc73mczmQVNT9Pk/fhwHutCqerr2jSPfw5Y837/RU06N7Q25Dz98Fe7kgYo9zQS8lyBf1ForJxmSVjuf6gxMHrq/N2tJCfm+wxupA9DV3byjweV4D5fg/pgIXmWeups2wFaoMO+wCKDxZn6j4LAmpi2BqFfx18AfuuvvU0s8cm0sUq1L6eVlymkfSlZhZt6Ns4nSEgLciq5BUmFPr1jGDq9wwPXaDphH6l9O27zlrg9ikBLgLj6KBtSrOtwuy5Tq8Aym3DgruIROtCdecE6JkrLZsP5Mrmlbpwua99J2jrOvq0XokmbT+eye5kU2X0bL8SzLFosMpsWCsim7BxJ2j0v0ScVrI7QdD96a7IpL3LPrB2W01rQO2840Paz5uVK9kXNZqG2uAeSmqXATDhqb4KtkK8ZxQFuwlstw3+QzJULle2DprVAanK6OVtO0q5KSmn8o65GUJOELkpILufwDUEsDBBQAAAgIAACAn+u0BMkPbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrRSomVikomZqXFiclqSmaWBpa5pUpK5eVKqSZp5YopJinGqUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACAn+s81dbPXAIAAAAFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACAn+u0BMkPbQAAAHgAAAAJACQAAAAAAAAAAAAAAKkCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
+    dataString: UEsDBBQAAAgIAABAIew81dbPXAIAAAAFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty2jAU/RVG65KxCY/SXesQ0kVCJrSTjTeydY01yJJHj/DI8O+9kg123BXinPs45+rKn4RLU0NulV5rzp4VA/JjRPyZfBt15BMc6U7JLT/DNeadM1v6IBpi3qjlCvHYpxlVgdU8/yl3wgdHCDrJC6WrFdtBoow1CBdUGEBKK+uzJUKfI3LEn/HSp5zwNFn40xlPy2h0wWMO0oLuhU7vlt9ncTybTVfjaNGmXZOaHCdzQasamDfQpcbzNjpuwiRaayO8jVwJwU2ri9hTHXwntDYOXWEA4xR9BjE+vgS+K63X3E/eFIUB20rS9PTANY6rqUp+qWaGFTX7RtcHFc73mczmQVNT9Pk/fhwHutCqerr2jSPfw5Y837/RU06N7Q25Dz98Fe7kgYo9zQS8lyBf1ForJxmSVjuf6gxMHrq/N2tJCfm+wxupA9DV3byjweV4D5fg/pgIXmWeups2wFaoMO+wCKDxZn6j4LAmpi2BqFfx18AfuuvvU0s8cm0sUq1L6eVlymkfSlZhZt6Ns4nSEgLciq5BUmFPr1jGDq9wwPXaDphH6l9O27zlrg9ikBLgLj6KBtSrOtwuy5Tq8Aym3DgruIROtCdecE6JkrLZsP5Mrmlbpwua99J2jrOvq0XokmbT+eye5kU2X0bL8SzLFosMpsWCsim7BxJ2j0v0ScVrI7QdD96a7IpL3LPrB2W01rQO2840Paz5uVK9kXNZqG2uAeSmqXATDhqb4KtkK8ZxQFuwlstw3+QzJULle2DprVAanK6OVtO0q5KSmn8o65GUJOELkpILufwDUEsDBBQAAAgIAABAIey0BMkPbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrRSomVikomZqXFiclqSmaWBpa5pUpK5eVKqSZp5YopJinGqUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAABAIew81dbPXAIAAAAFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIey0BMkPbQAAAHgAAAAJACQAAAAAAAAAAAAAAKkCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -1298,6 +1310,7 @@ MonoBehaviour:
   FootstepAudio: []
   Myaudio: {fileID: 0}
   MovementSpeed: 10
+  taskPopup: {fileID: 0}
 --- !u!50 &1869472705
 Rigidbody2D:
   serializedVersion: 4
