@@ -36,7 +36,7 @@ public class TaskScript : MonoBehaviour
         if (button >= 2)
         {
             gameObject.SetActive(false);
-            player.GetComponent<PlayerControlllerTask>().move();
+            player.GetComponent<PlayerController>().move();
             button = 0;
         }
     }
