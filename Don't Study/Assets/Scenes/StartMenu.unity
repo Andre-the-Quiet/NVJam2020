@@ -558,36 +558,6 @@ MonoBehaviour:
   HoverFX: {fileID: 8300000, guid: 30ee76cdf1c52d0468b511d8e39a2e98, type: 3}
   StartMenuSoundFX: {fileID: 693643802}
   PressedFX: {fileID: 8300000, guid: 1c0a531416831a545869d9304e2a32f1, type: 3}
---- !u!1 &802069353
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 802069355}
-  m_Layer: 0
-  m_Name: LevelScript
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &802069355
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802069353}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.0036836, y: -1.4483635, z: -597.54974}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &917647743
 GameObject:
   m_ObjectHideFlags: 0
