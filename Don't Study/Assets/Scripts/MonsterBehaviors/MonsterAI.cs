@@ -19,6 +19,8 @@ public class MonsterAI : MonoBehaviour
     Seeker seeker;
     Rigidbody2D rb;
 
+    public Animator MonsterAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +64,7 @@ public class MonsterAI : MonoBehaviour
 
         Vector2 direction = (Vector2)path.vectorPath[currWaypoint] - rb.position;
         direction = direction.normalized;
-
+        //changeAnim(direction);
         Vector2 force = direction * speed * Time.deltaTime;
         rb.AddForce(force);
 
@@ -79,5 +81,12 @@ public class MonsterAI : MonoBehaviour
         {
             sprite.localScale = new Vector3(1f, 1f, 1f);
         }
+    }
+    private void changeAnim(Vector2 AnimDirection)
+    {
+        
+        MonsterAnim.SetFloat("Horizontal", AnimDirection.x);
+        MonsterAnim.SetFloat("Vertical", AnimDirection.y);
+        MonsterAnim.SetFloat("Speed", AnimDirection.sqrMagnitude);
     }
 }
