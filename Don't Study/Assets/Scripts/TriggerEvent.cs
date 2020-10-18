@@ -5,43 +5,36 @@ using UnityEngine;
 
 public class TriggerEvent : MonoBehaviour
 {
-    public Boolean EnterMap2 = false;
-    public SpriteRenderer Map1;
-    public SpriteRenderer Map2;
+    public bool teleported = false;
+    public GameObject dest;
     public GameObject target;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.CompareTag ("Player"))
         {
-            if(EnterMap2 == false)
+            //Debug.Log("PLAYER");
+            if (!teleported)
             {
-                
-                Map1.sortingOrder = -3;
-                
+                dest.GetComponent<TriggerEvent>().teleport();
+                //Debug.Log("PRESSED");
+                col.transform.position = dest.transform.position;
             }
-            if(EnterMap2 == true)
-            {
-                
-                Map1.sortingOrder = -2;
-                
-            }
-            
-            
+
+
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+
+    private void OnTriggerExit2D(Collider2D col)
     {
-        if (collision.IsTouching(target.GetComponent<CapsuleCollider2D>()))
+        if (col.CompareTag("Player"))
         {
-            if(EnterMap2 == false)
-            {
-                EnterMap2 = true;
-            }
-            if (EnterMap2 ==true)
-            {
-                EnterMap2 = false;
-            }
+            teleported = false;
         }
+    }
+
+    public void teleport()
+    {
+        teleported = true;
     }
 }
