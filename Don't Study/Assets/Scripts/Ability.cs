@@ -33,7 +33,9 @@ public class Ability : MonoBehaviour
             isCooldown = true;
             abilityImage.fillAmount = 0;
             Myaudio.PlayOneShot(AbilitySound);
-            AbilityAnimator.SetBool("IsPressed", true);
+            AbilityAnimator.SetTrigger("Start");
+            
+            
         }
         if (isCooldown)
         {
