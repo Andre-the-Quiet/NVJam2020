@@ -203,7 +203,7 @@ RectTransform:
   m_Children:
   - {fileID: 603448881}
   m_Father: {fileID: 1772432121}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -489,7 +489,7 @@ RectTransform:
   m_LocalScale: {x: 8.375, y: 1.7437501, z: 1}
   m_Children: []
   m_Father: {fileID: 1772432121}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -645,7 +645,7 @@ RectTransform:
   m_LocalScale: {x: 1.4125, y: 1.5625, z: 1}
   m_Children: []
   m_Father: {fileID: 1772432121}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -674,10 +674,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8fe7307bdfca3864185e1944eec8ca87, type: 3}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -685,24 +685,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Artist:
-
-
-    Mudi L.
-
-    Sarah K.
-
-    Rosemary W.
-
-    Yufei X.
-
-    Bob
-    W.
-
-    Programmar:
-
-
-'
+  m_Text: "Artist:\n\nMudi L.\nSarah Y.\nRosemary W.\nYufei X.\nBob W.\n\nProgrammar:\n\nMasato
+    L.\nAndr\xE9 P.\nBob W."
 --- !u!222 &834112203
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1027,11 +1011,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 911445299}
-  - {fileID: 389659725}
-  - {fileID: 1798388375}
+  - {fileID: 834112201}
   - {fileID: 570285356}
   - {fileID: 1886517300}
-  - {fileID: 834112201}
+  - {fileID: 389659725}
+  - {fileID: 1798388375}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1142,7 +1126,7 @@ RectTransform:
   m_LocalScale: {x: 1.00008, y: 1.00008, z: 1.00008}
   m_Children: []
   m_Father: {fileID: 1772432121}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1179,7 +1163,7 @@ RectTransform:
   m_LocalScale: {x: 1.5625, y: 1.4231249, z: 1}
   m_Children: []
   m_Father: {fileID: 1772432121}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
