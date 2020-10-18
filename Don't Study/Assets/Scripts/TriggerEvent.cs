@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class TriggerEvent : MonoBehaviour
 {
+    public Animator transitionAnim;
     public bool teleported = false;
     public GameObject dest;
     public GameObject target;
+
+    
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -18,7 +21,8 @@ public class TriggerEvent : MonoBehaviour
             {
                 dest.GetComponent<TriggerEvent>().teleport();
                 //Debug.Log("PRESSED");
-                col.transform.position = dest.transform.position;
+                
+                StartCoroutine(LoadScene(col));
             }
 
 
@@ -36,5 +40,12 @@ public class TriggerEvent : MonoBehaviour
     public void teleport()
     {
         teleported = true;
+    }
+    IEnumerator LoadScene(Collider2D col)
+    {
+        transitionAnim.SetTrigger("End");
+        yield return new WaitForSeconds(0.3f);
+        col.transform.position = dest.transform.position;
+        transitionAnim.SetTrigger("Start");
     }
 }

@@ -5,10 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
+    public Animator transitionAnim;
+    public string sceneName;
     public void StartGame()
     {
-        SceneManager.LoadScene("Level1");
+        StartCoroutine(LoadScene());
         
+    }
+    IEnumerator LoadScene()
+    {
+        transitionAnim.SetTrigger("End");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneName);
     }
     public void QuitGame()
     {

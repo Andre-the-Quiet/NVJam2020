@@ -1908,9 +1908,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e59469327b63374685c515a5cb94c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 1871255316}
   teleported: 0
   dest: {fileID: 1683734638}
   target: {fileID: 192737240}
+  col: {fileID: 325880508}
 --- !u!4 &325880510
 Transform:
   m_ObjectHideFlags: 0
@@ -2770,9 +2772,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e59469327b63374685c515a5cb94c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 1871255316}
   teleported: 0
   dest: {fileID: 1972183329}
   target: {fileID: 192737240}
+  col: {fileID: 864731637}
 --- !u!4 &864731639
 Transform:
   m_ObjectHideFlags: 0
@@ -2886,6 +2890,7 @@ RectTransform:
   - {fileID: 1773647066}
   - {fileID: 171445123}
   - {fileID: 404693054}
+  - {fileID: 1871255315}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3996,9 +4001,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e59469327b63374685c515a5cb94c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 1871255316}
   teleported: 0
   dest: {fileID: 2013384433}
   target: {fileID: 192737240}
+  col: {fileID: 1245523200}
 --- !u!4 &1245523202
 Transform:
   m_ObjectHideFlags: 0
@@ -4681,9 +4688,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e59469327b63374685c515a5cb94c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 1871255316}
   teleported: 0
   dest: {fileID: 325880506}
   target: {fileID: 192737240}
+  col: {fileID: 1683734640}
 --- !u!4 &1683734642
 Transform:
   m_ObjectHideFlags: 0
@@ -4793,6 +4802,101 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1871255314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871255315}
+  - component: {fileID: 1871255318}
+  - component: {fileID: 1871255317}
+  - component: {fileID: 1871255316}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1871255315
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871255314}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.50004, y: 0.50004, z: 0.50004}
+  m_Children: []
+  m_Father: {fileID: 919844995}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 2.3000488, y: -15}
+  m_SizeDelta: {x: 2056.0889, y: 1255.9817}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1871255316
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871255314}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 01abf2e162e56854fad33ae2725668b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1871255317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871255314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1871255318
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871255314}
+  m_CullTransparentMesh: 0
 --- !u!1 &1933546260
 GameObject:
   m_ObjectHideFlags: 0
@@ -4905,9 +5009,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e59469327b63374685c515a5cb94c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 1871255316}
   teleported: 0
   dest: {fileID: 864731635}
   target: {fileID: 192737240}
+  col: {fileID: 1972183331}
 --- !u!4 &1972183333
 Transform:
   m_ObjectHideFlags: 0
@@ -5082,9 +5188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e59469327b63374685c515a5cb94c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 1871255316}
   teleported: 0
   dest: {fileID: 1245523198}
   target: {fileID: 192737240}
+  col: {fileID: 2013384435}
 --- !u!4 &2013384437
 Transform:
   m_ObjectHideFlags: 0
@@ -5109,6 +5217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2100863033}
   - component: {fileID: 2100863032}
+  - component: {fileID: 2100863034}
   m_Layer: 0
   m_Name: LevelScript
   m_TagString: Untagged
@@ -5143,3 +5252,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2100863034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100863031}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7edebff0549641344bbf8d8b9e292058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 0}
+  sceneName: 
