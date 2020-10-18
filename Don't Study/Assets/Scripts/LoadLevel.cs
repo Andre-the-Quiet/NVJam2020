@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LoadLevel : MonoBehaviour
 {
     public Animator transitionAnim;
+    public Animator UI;
     public string sceneName;
     public void StartGame()
     {
@@ -15,7 +16,8 @@ public class LoadLevel : MonoBehaviour
     IEnumerator LoadScene()
     {
         transitionAnim.SetTrigger("End");
-        yield return new WaitForSeconds(1f);
+        UI.SetTrigger("Start");
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(sceneName);
     }
     public void QuitGame()

@@ -53,7 +53,7 @@ public class Ability : MonoBehaviour
     IEnumerator SpeedBoost()
     {
         MyCharacter.MovementSpeed = 16f;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         MyCharacter.MovementSpeed = 8f;
     }
 }
