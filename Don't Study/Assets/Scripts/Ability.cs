@@ -9,6 +9,11 @@ public class Ability : MonoBehaviour
     public float cooldown = 5f;
     bool isCooldown = false;
     public KeyCode AbilityKey;
+    public Animator AbilityAnimator;
+
+    public AudioClip AbilitySound;
+    public AudioSource Myaudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +32,8 @@ public class Ability : MonoBehaviour
         {
             isCooldown = true;
             abilityImage.fillAmount = 0;
+            Myaudio.PlayOneShot(AbilitySound);
+            AbilityAnimator.SetBool("IsPressed", true);
         }
         if (isCooldown)
         {
