@@ -8,26 +8,21 @@ public class FieldOfView : MonoBehaviour
     LayerMask obstacles;
     private Mesh cone;
     Vector3 origin;
-    float startAngle;
-    float fov;
-    float viewDist;
-    //Vector3 startPos;
-    //Vector3 offset;
+    public float startAngle;
+    public float fov;
+    public float viewDist;
     private void Start()
     {
         cone = new Mesh();
         GetComponent<MeshFilter>().mesh = cone;
-        //startPos = transform.position;
         origin = Vector3.zero;
-        fov = 90f;
+        fov = 60f;
         viewDist = 5f;
     }
 
     private void LateUpdate()
     {
         int rayCount = 50;
-       // offset = transform.position - startPos;
-       // startPos = origin;
         float angle = startAngle;
         float incrAngle = fov / rayCount;
 

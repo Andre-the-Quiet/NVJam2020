@@ -6,12 +6,18 @@ public class ChaseBehavior : StateMachineBehaviour
 {
     private GameObject monster;
     private MonsterAI ai;
+    private Patrol patrolScript;
+    private GameObject target;
+    private FieldOfView cone;
     public float speed = 400f;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         monster = GameObject.FindGameObjectWithTag("Monster");
+        target = GameObject.FindGameObjectWithTag("Player");
         ai = monster.GetComponent<MonsterAI>();
+        patrolScript = monster.GetComponent<Patrol>();
+        cone = GameObject.FindGameObjectWithTag("FOV").GetComponent<FieldOfView>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
